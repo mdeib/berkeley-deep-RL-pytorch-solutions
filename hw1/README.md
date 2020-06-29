@@ -27,11 +27,11 @@ The agent in the Walker2d environment was only able to achieve 1.1% expert perfo
 
 It can be seen that the agent was able to improve greatly with more training updates, reaching almost 90 percent of the expert performance. Also notable is the significant initial time it took to actually begin performing.
 
-![Evaluation Standard Deviation](results/bc-eval-std.PNG)
+![Evaluation Standard Deviation](results/Q1-3/bc-eval-std.PNG)
 
 While average performance seems to be quite good, the standard deviation over the course of training is a bit more telling, as is the min/max returns. The agent continues to have trials where it makes a mistake and is unable to recover, resulting in a terrible rollout and a large standard deviation. If the agent was really learning to perform well in the environment we would see the standard deviation fall as it begins to consistently do well. This perfectly illustrates the weaknesses of behavioral cloning, and leads into question 2.2.
 
-##Question 2.2
+## Question 2.2
 
 For this question dagger learning was done on the Walker2d environment used in question 1.3. In the first 10k steps behavioral cloning was done, after which 9 iterations of dagger were carried out. Thus a total of 100k training steps were done, just like in question 1.3. All other things were kept the same. This allows the usage of dagger to be fairly tested. The average returns are below:
 
