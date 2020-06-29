@@ -1,6 +1,9 @@
 # Section 1 Behavior Cloning
 
-Below is the HW1 report. All data used to answer these questions can be found in cs285/data in the respective question's folder - videos aren't included to save space.
+Below is the HW1 report. All data used can be found in the results folder - videos aren't included to save space. To view the tensorboard for a specific part navigate to that part's folder (not the subfolders) and run 
+```commandline
+tensorboard --logdir .
+```
 
 ## Question 1.2
 
