@@ -151,7 +151,7 @@ $ python cs285/scripts/run_hw2_policy_gradient.py --env_name CartPole-v0 -n 100 
 
 ![Lambda Comparison](results/bonus-gae-cp/gae_cp_comp.png)
 
-This time using GAE did indeed provide faster learning initially. All methods with lambda > 0.8 converged to optimal behavior, but using lambda < 1 provided clear advantage in speed of learning. Once again a lambda of 0.4 vastly underperformed, suggesting a suboptimal baseline. Even so GAE was able to speed up learning signifigantly, thus proving itself as a useful tool in DRL.
+This time using GAE did indeed provide faster learning initially. All methods with lambda > 0.8 converged to optimal behavior, but using lambda < 1 provided clear advantage in speed of learning. Once again a lambda of 0.4 vastly underperformed, suggesting a suboptimal baseline. Even so GAE was able to speed up learning significantly, thus proving itself as a useful tool in DRL.
 
 
 
