@@ -94,11 +94,11 @@ $ python cs285/scripts/run_hw2_policy_gradient.py --env_name HalfCheetah-v2 --ep
 The final 3 combinations with batch sizes of 50k once again did not fit on my GPU. The overall trend is obvious from the first 6, so this does not seem to be much of a problem. The final comparison can be seen below:
 
 ![Hyperparameter Search Results](results/problem-7-search/cheetah-search-eval-avg.png)
-*Green -------- b = 30k lr = 0.02\n
-Dark Blue ---- b = 10k lr = 0.02\n
-Pink --------- b = 30k lr = 0.01\n
-Orange ------- b = 10k lr = 0.01\n
-Rust --------- b = 30k lr = 0.005\n
+*Green -------- b = 30k lr = 0.02  
+Dark Blue ---- b = 10k lr = 0.02  
+Pink --------- b = 30k lr = 0.01  
+Orange ------- b = 10k lr = 0.01  
+Rust --------- b = 30k lr = 0.005  
 Light Blue --- b = 10k lr = 0.005*
 
 Both learning rate and batch size seem to have a positive correlation with performance over the space tested, with learning rate seemingly having a much stronger effect. While increasing batch size does require more c3omputational resources, it does not seem to ever hinder performance. In light of this I think it is safe to assume that the best combination within this space would be a batch size of 50k and a learning rate of 0.02. For part two of this problem, parameters of 30k and 0.02 will be tested due to the limited GPU memory.
