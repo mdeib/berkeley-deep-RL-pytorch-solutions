@@ -18,9 +18,9 @@ $ python cs285/scripts/run_hw2_policy_gradient.py --env_name CartPole-v0 -n 100 
 And a comparison of the average returns with small batches is below:
 
 ![Small Batch Averages](results/problem-3-sb/eval-avg-cp-sb.png)
-*Blue ---- rtg & dsa
-Orange -- dsa
-Red ----- rtg*
+*Blue ---- rtg & dsa  
+Orange -- dsa  
+Red ----- rtg  *
 
 
 Next we examine the same experiment with larger batches:
@@ -34,9 +34,9 @@ $ python cs285/scripts/run_hw2_policy_gradient.py --env_name CartPole-v0 -n 100 
 And the corresponding comparison below:
 
 ![Large Batch Averages](results/problem-3-lb/eval-avg-cp-lb.png)
-*Blue ---- rtg & dsa
-Orange -- dsa
-Red ----- rtg*
+*Blue ---- rtg & dsa  
+Orange -- dsa  
+Red ----- rtg  *
 
 As expected, reward-to-go seems to always provide better performance. Advantage standardization's effects seem harder to discern, although with larger batches it seems to actually hinder performance. Batch size had a very clear effect, with the larger size providing both faster convergence and more stable learning/behavior once converged.
 
@@ -60,10 +60,10 @@ $ python cs285/scripts/run_hw2_policy_gradient.py --env_name InvertedPendulum-v2
 And the final comparison below, where it can be seen that further optimization will cause the learning to fail. Interestingly a slightly larger batch size of 100 also fails, suggesting that learning at batch sizes and learning rates of this magnitude is extremely unstable, and some luck is needed to reach the goal.
 
 ![Hyperparameter Search Results](results/problem-4/ideal-params-comparison.png)
-*Red ---------- rtg and baseline 
-Dark Blue ---- rtg
-Orange ------- neither
-Light Blue --- baseline*
+*Red ---------- rtg and baseline   
+Dark Blue ---- rtg  
+Orange ------- neither  
+Light Blue --- baseline  *
 
 ## Problem 6
 The baseline network is first tested in the continuous lunar lander environment. The suggested batch size of 40k would not fit in GPU memory so 30k was used, with similar results.
@@ -99,7 +99,7 @@ Dark Blue ---- b = 10k lr = 0.02
 Pink --------- b = 30k lr = 0.01  
 Orange ------- b = 10k lr = 0.01  
 Rust --------- b = 30k lr = 0.005  
-Light Blue --- b = 10k lr = 0.005*
+Light Blue --- b = 10k lr = 0.005  * 
 
 Both learning rate and batch size seem to have a positive correlation with performance over the space tested, with learning rate seemingly having a much stronger effect. While increasing batch size does require more c3omputational resources, it does not seem to ever hinder performance. In light of this I think it is safe to assume that the best combination within this space would be a batch size of 50k and a learning rate of 0.02. For part two of this problem, parameters of 30k and 0.02 will be tested due to the limited GPU memory.
 
@@ -115,10 +115,10 @@ $ python cs285/scripts/run_hw2_policy_gradient.py --env_name HalfCheetah-v2 --ep
 We now test the effects of rtg and a baseline on the found parameters:
 
 ![Hyperparameter Search Results](results/problem-7-ideal/cheetah-ideal-eval-avg.png)
-*Red ---------- rtg and baseline 
-Dark Blue ---- rtg
-Orange ------- neither
-Light Blue --- baseline*
+*Red ---------- rtg and baseline  
+Dark Blue ---- rtg  
+Orange ------- neither  
+Light Blue --- baseline  *
 
 Under these settings it can be seen that using RTG is the only thing that really matters - the baseline seemed to have little effect, and even massively hurt learning in the beginning without rtg. Not using rtg is likely so terrible in this case because of the discount - it causes the no rtg calculation to only care about the actions in the beginning, with the actions coming at the end labeled completely independant of the actual actions. As seen earlier, forgoing rtg in an undiscounted environment does not have such terrible effects.
 
