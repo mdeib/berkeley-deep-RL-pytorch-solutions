@@ -17,7 +17,7 @@ $ python cs285/scripts/run_hw2_policy_gradient.py --env_name CartPole-v0 -n 100 
 
 And a comparison of the average returns with small batches is below:
 
-![Small Batch Averages](results\problem-3-sb\eval-avg-cp-sb.png)
+![Small Batch Averages](results/problem-3-sb/eval-avg-cp-sb.png)
 *Blue ---- rtg & dsa
 Orange -- dsa
 Red ----- rtg*
@@ -33,7 +33,7 @@ $ python cs285/scripts/run_hw2_policy_gradient.py --env_name CartPole-v0 -n 100 
 
 And the corresponding comparison below:
 
-![Large Batch Averages](results\problem-3-lb\eval-avg-cp-lb.png)
+![Large Batch Averages](results/problem-3-lb/eval-avg-cp-lb.png)
 *Blue ---- rtg & dsa
 Orange -- dsa
 Red ----- rtg*
@@ -55,13 +55,11 @@ $ python cs285/scripts/run_hw2_policy_gradient.py --env_name InvertedPendulum-v2
 $ python cs285/scripts/run_hw2_policy_gradient.py --env_name InvertedPendulum-v2 --ep_len 1000 --discount 0.9 -n 100 -l 2 -s 64 -b 90 -lr 0.07 -rtg --exp_name ip_b90_lr0.07
 $ python cs285/scripts/run_hw2_policy_gradient.py --env_name InvertedPendulum-v2 --ep_len 1000 --discount 0.9 -n 100 -l 2 -s 64 -b 80 -lr 0.06 -rtg --exp_name ip_b80_lr0.06
 $ python cs285/scripts/run_hw2_policy_gradient.py --env_name InvertedPendulum-v2 --ep_len 1000 --discount 0.9 -n 100 -l 2 -s 64 -b 100 -lr 0.06 -rtg --exp_name ip_b100_lr0.06
-
-
 ```
 
 And the final comparison below, where it can be seen that further optimization will cause the learning to fail. Interestingly a slightly larger batch size of 100 also fails, suggesting that learning at batch sizes and learning rates of this magnitude is extremely unstable, and some luck is needed to reach the goal.
 
-![Hyperparameter Search Results](results\problem-4\ideal-params-comparison.png)
+![Hyperparameter Search Results](results/problem-4/ideal-params-comparison.png)
 *Red ---------- rtg and baseline 
 Dark Blue ---- rtg
 Orange ------- neither
@@ -75,7 +73,7 @@ $ python cs285/scripts/run_hw2_policy_gradient.py --env_name LunarLanderContinuo
 ```
 Average evaluation resturns can be seen below:
 
-![Large Batch Averages](results\problem-6\eval-avg-ll.png)
+![Large Batch Averages](results/problem-6/eval-avg-ll.png)
 
 ## Problem 7
 
@@ -116,7 +114,7 @@ $ python cs285/scripts/run_hw2_policy_gradient.py --env_name HalfCheetah-v2 --ep
 
 We now test the effects of rtg and a baseline on the found parameters:
 
-![Hyperparameter Search Results](results\problem-7-ideal\cheetah-ideal-eval-avg.png)
+![Hyperparameter Search Results](results/problem-7-ideal/cheetah-ideal-eval-avg.png)
 *Red ---------- rtg and baseline 
 Dark Blue ---- rtg
 Orange ------- neither
@@ -140,7 +138,7 @@ $ python cs285/scripts/run_hw2_policy_gradient.py --env_name HalfCheetah-v2 --ep
 ```
  And the final comparison:
 
-![Lambda Comparison](results\bonus-gae\gae_hc_comp)
+![Lambda Comparison](results/bonus-gae/gae_hc_comp.png)
 
 In this particular environment GAE actually turned out to hinder learning progressively more as lambda was decreased. It seems in this particular case the bias introduced by the baseline was far worse than the variance of the monte carlo roll-outs. This may be because the hyperparameters/method of baseline training was bad, or it may just be a symptom of the environment. Testing in other environments would be a good idea to further investigate this issue. 
 
