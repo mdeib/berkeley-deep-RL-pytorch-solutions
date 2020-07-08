@@ -51,7 +51,7 @@ One hyperparameter that is often ignored is weight initialization. For all other
 
 ![Comparison](results/Q3-init/init_pong_comp.png)
 
-Using this weight initialization seems to provide a big learning advantage at first, bu tdoes not seem to lead to any long term improvements. It is however most likley still worth it to use this improved initilization in place of Pytorch's default for other DQN runs.
+Using this weight initialization seems to provide a big learning advantage at first, but does not seem to lead to any long term improvements. It is however most likley still worth it to use this improved initilization in place of Pytorch's default for future DQN runs.
 
 
 ## Question 4
