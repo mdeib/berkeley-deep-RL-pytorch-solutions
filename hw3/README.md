@@ -104,7 +104,7 @@ $ python cs285/scripts/run_hw3_actor_critic.py --env_name HalfCheetah-v2 --ep_le
 
 A run of VPG with the same hyper-parameters (where applicable) from HW2 is included in order to compare the two methods. The chart is below, with VPG in orange and AC in blue:
 
-![Comparison](results/Q5-IP/IP_ac_eval.png)
+![Comparison](results/Q5-HC/HC_ac_eval.png)
 
 In this environment with these parameters VPG (with rtg and a baseline) actually seems to perform much better than AC, achieving a higher performance in far fewer steps with less variance. 
 
