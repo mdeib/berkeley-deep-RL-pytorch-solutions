@@ -34,7 +34,7 @@ $ python cs285/scripts/run_hw3_dqn.py --env_name LunarLander-v2 --double_q --exp
 $ python cs285/scripts/run_hw3_dqn.py --env_name LunarLander-v2 --double_q --exp_name double_dqn_ll_seed3 --seed 3 
 ```
 
-![Comparison](results/Q1/double_dqn_eval_ll.png)
+![Comparison](results/Q2/double_dqn_eval_ll.png)
 
 Unlike in Pong the Double DQN (Green, Pink, Light Blue) does not seem to provide any significant advantage over the regular DQN in this environment.
 
@@ -104,7 +104,7 @@ $ python cs285/scripts/run_hw3_actor_critic.py --env_name HalfCheetah-v2 --ep_le
 
 A run of VPG with the same hyper-parameters (where applicable) from HW2 is included in order to compare the two methods. The chart is below, with VPG in orange and AC in blue:
 
-![Comparison](results/Q5-HC/HC_ac_eval.png)
+![Comparison](results/Q5-HC/hc_comp.png)
 
 In this environment with these parameters VPG (with rtg and a baseline) actually seems to perform much better than AC, achieving a higher performance in far fewer steps with less variance. 
 
