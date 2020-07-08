@@ -1,5 +1,6 @@
-import sys
-sys.path.append(r'C:\Users\Matt\OneDrive\RL\UCBerkeley-deep-RL\hw3')
+#If not using anaconda use next two lines:
+#import sys
+#sys.path.append(r'<your path to hw3>')
 
 import os
 import time
