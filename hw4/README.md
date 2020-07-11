@@ -37,7 +37,7 @@ Now the MBRL algorithm is tested with iterative training and a replay buffer in 
 $ python cs285/scripts/run_hw4_mb.py --exp_name obstacles --env_name obstacles-cs285-v0 --add_sl_noise --num_agent_train_steps_per_iter 20 --batch_size_initial 5000 --batch_size 1000 --mpc_horizon 10 --n_iter 12 --video_log -1
 ```
 
-![Comparison](results/problem-3-obstacles/obstacels_returns.png)
+![Comparison](results/problem-3-obstacles/obstacles_returns.png)
 
 ### Reacher Environment
 
