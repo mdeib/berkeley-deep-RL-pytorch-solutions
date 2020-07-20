@@ -10,7 +10,7 @@ All commands used will be in the README.txt
 
 First we run our actor-critic on the pointmass environment with no extra exploration tactic in order to establish a baseline performance:
 
-![No Exploration](results/problem-1-none/hist_returns.png)
+![No Exploration](results/problem-1-none/no_exploration_returns.png)
 
 It can be seen that the agent only managed to find the goal area once out of three tries (with seed 1). It is clear from these trials that the agent would benefit from an exploration bonus.  
   
