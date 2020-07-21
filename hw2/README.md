@@ -1,4 +1,6 @@
-# Section 2 Policy Gradient
+# Section 2 Policy Gradient  
+
+***These results do not reflect minor errors in the code that have since been fixed***
 
 Below is the report for HW2. All data used can be found in the results folder. To view the tensorboard for a specific part navigate to that part's folder (or subfolders) and run 
 ```commandline
