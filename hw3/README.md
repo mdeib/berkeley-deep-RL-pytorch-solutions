@@ -1,5 +1,7 @@
 # Section 3 DQN and Actor-Critic
 
+***These results do not reflect minor errors in the code that have since been fixed***
+
 Below is the report for HW3. All data used can be found in the results folder. For the Pong DQN runs only the most recent video for each run is kept in order to save space. To view the tensorboard for a specific part navigate to that part's folder (or subfolders) and run 
 ```commandline
 tensorboard --logdir .
