@@ -126,7 +126,7 @@ class PGAgent:
 
                 for rew_list in rewards:
                     GAE.append(self.generalized_advantage_estimator(V[indice: indice + len(rew_list)], rew_list))
-                    indice = len(rew_list)
+                    indice += len(rew_list)
 
                 adv_n = np.concatenate(GAE)
 
