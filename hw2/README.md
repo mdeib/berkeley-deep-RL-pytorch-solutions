@@ -142,7 +142,7 @@ $ python cs285/scripts/run_hw2_policy_gradient.py --env_name HalfCheetah-v2 --ep
 
 ![Lambda Comparison](results/bonus-gae/gae_hc_comp.png)
 
-In this particular environment GAE actually turned out to hinder learning progressively more as lambda was decreased. It seems in this particular case the bias introduced by the baseline was far worse than the variance of the monte carlo roll-outs. This may be because the hyperparameters/method of baseline training was bad, or it may just be a symptom of the environment. To further investigate this issue, the same experiment was run in the cartpole environment with the following commands:
+In this particular environment GAE seemed to increase learning initially but then even out and even fall behind later. It also seems that the more moderate lambdas (0.9-0.99) had less variance then the normal baseline algorithm. Overall though it seems in this particular case the bias introduced by the baseline was far worse than the variance of the monte carlo roll-outs, with very low lambdas (which rely more on baseline) perdorming quite poorly. This may be because the hyperparameters/method of baseline training was bad, or it may just be a symptom of the environment. To further investigate this issue, the same experiment was run in the cartpole environment with the following commands:
 
 ```commandline
 $ python cs285/scripts/run_hw2_policy_gradient.py --env_name CartPole-v0 -n 100 -b 5000 -dsa --exp_name cp_lambda1 -l 1 -s 32 --nn_baseline
@@ -153,7 +153,7 @@ $ python cs285/scripts/run_hw2_policy_gradient.py --env_name CartPole-v0 -n 100 
 
 ![Lambda Comparison](results/bonus-gae-cp/gae_cp_comp.png)
 
-This time using GAE did indeed provide faster learning initially. All methods with lambda > 0.8 converged to optimal behavior, but using lambda < 1 provided clear advantage in speed of learning. Once again a lambda of 0.4 vastly underperformed, suggesting a suboptimal baseline. Even so GAE was able to speed up learning significantly, thus proving itself as a useful tool in DRL.
+This time GAE does not seem to provide any benefit, with lambadas lower than one producing lower performance throughout. All methods with lambda > 0.8 do seem to converge to optimal behavior though. It may be worth it to investigate across more seeds. Once again a lambda of 0.4 vastly underperformed, suggesting a suboptimal baseline. GAE would most likely perform much better with a more accurate value function, as the baseline in this implementation is really only meant to be a rough approximation.
 
 
 
