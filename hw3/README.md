@@ -101,7 +101,7 @@ Just like in Vanilla Policy Gradient the larger batch size (in dark blue) does a
 The actor-critic algorithm is then applied to the half-cheetah environment:
 
 ```commandline
-$ python cs285/scripts/run_hw3_actor_critic.py --env_name HalfCheetah-v2 --ep_len 150 --discount 0.90 --n 150 -l 2 -s 32 -b 30000 -eb 1500 -lr 0.02 --exp_name 10_10 -ntu 10 -ngsptu 10
+$ python cs285/scripts/run_hw3_actor_critic.py --env_name HalfCheetah-v2 --ep_len 150 --discount 0.90 -n 150 -l 2 -s 32 -b 30000 -eb 1500 -lr 0.02 --exp_name 10_10 -ntu 10 -ngsptu 10
 ```
 
 A run of VPG with the same hyper-parameters (where applicable) from HW2 is included in order to compare the two methods. The chart is below, with VPG in orange and AC in blue:
