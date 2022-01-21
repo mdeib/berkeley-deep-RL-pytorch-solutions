@@ -1,5 +1,5 @@
 gym==0.10.11
 mujoco-py==1.50.1.35
 matplotlib==2.2.2
-ipython==6.4.0
+ipython==7.16.3
 moviepy==1.0.0
